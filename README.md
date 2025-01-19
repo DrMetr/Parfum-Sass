@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/DrMetr/Parfum-Sass))
-- Live Site URL: [Live site]([https://your-live-site-url.com](https://drmetr.github.io/Parfum-Sass/))
+- Solution URL: [Solution](https://github.com/DrMetr/Parfum-Sass)
+- Live Site URL: [Live site](https://drmetr.github.io/Parfum-Sass/)
 
 ## My process
 
