@@ -10,14 +10,14 @@ $Verydarkcyan: hsl(159, 43%, 27%);
 }
 
 @mixin monstserrat500 {
-    font {
+    font: {
         family: Montserrat, sans-serif;
         weight: 500;
     }
 }
 
 @mixin fraunces700 {
-    font {
+    font: {
         family: Fraunces, serif;
         weight: 700;
     }
