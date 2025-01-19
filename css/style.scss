@@ -1,0 +1,147 @@
+$Darkcyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$Verydarkblue: hsl(212, 21%, 14%);
+$Darkgrayishblue: hsl(228, 12%, 48%);
+$Verydarkcyan: hsl(159, 43%, 27%);
+
+:root {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+@mixin monstserrat500 {
+    font {
+        family: Montserrat, sans-serif;
+        weight: 500;
+    }
+}
+
+@mixin fraunces700 {
+    font {
+        family: Fraunces, serif;
+        weight: 700;
+    }
+}
+
+@mixin bradius {
+    border-radius: 10px;
+}
+
+@use "./layout_properties.scss";
+
+body {
+    background-color: $Cream;
+    @include layout_properties.mobile;
+    margin: 2rem;
+
+    @media screen and (min-width: 768px) {
+        @include layout_properties.desktop;
+        width: 100vw;
+        margin-top: 7rem;
+    }
+}
+
+picture {
+    img {
+        width: 100%;
+        height: 45vh;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        object-fit: cover;
+            
+        @media screen and (min-width: 768px) {
+            height: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 0px;
+            margin-bottom: -6px;
+            }
+        }
+    }
+
+section {
+    @include bradius;
+    background-color: white;
+    min-width: 350px;
+    max-width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: -5px;
+    
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-width: 500px;
+        max-width: 600px;
+    }
+}
+
+h1 {
+    margin-top: 0.5lh;
+    color: $Verydarkblue;
+    @include fraunces700;
+}
+
+p {
+    @include monstserrat500;
+    margin-top: 0.5lh;
+    color: $Darkgrayishblue;
+}
+
+.notpicture {
+    padding: 5%;
+}
+
+.producttype {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $Darkgrayishblue;
+}
+
+.price {
+    color: var(--darkcyan);
+    float: left;
+    padding-right: 0.7rem;
+    margin-top: 1lh;
+    @include fraunces700;
+}
+
+.oldprice{
+    font-size: 0.9rem;
+    color: $Darkgrayishblue;
+    text-decoration: line-through;
+}
+
+.button {
+    @include bradius;
+    background-color: $Darkcyan;
+    padding: 0.5lh;
+    text-align: center;
+    color: white;
+    margin-top: 1.3lh;
+    letter-spacing: 0.5px;
+    font {
+        family: Montserrat, sans-serif;
+        weight: 700;
+    }
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: $Verydarkcyan;
+    transition: 0.08s;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 15px;
+    a { color: hsl(228, 45%, 44%); }
+}
